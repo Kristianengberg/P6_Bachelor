@@ -6,7 +6,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 from collections import deque
-
+import threading
+import asyncio
 
 class DQN:
     def __init__(self, input_size, output_size, env):
@@ -58,19 +59,20 @@ class DQN:
 
 
 env = gym.make('CartPole-v0')
-agents = []
-amount_agents = 1
-for _ in range(amount_agents):
-    agents.append(DQN(env.observation_space.shape[0], env.action_space.n, env))
+network = DQN(env.observation_space.shape[0], env.action_space.n, env)
 
-episodes = 2000
-steps = 500
-batch_size = 64
-mean_reward = 0
-plot_reward = []
 
-for agent in range(len(agents)):
+
+
+async def learner_thread(network):
+    episodes = 1000
+    steps = 500
+    batch_size = 64
+    mean_reward = 0
+    env = gym.make('CartPole-v0')
+
     for i in range(episodes):
+
         state = env.reset()
         state = state.reshape(1, 4)
         reward_per_play = 0
@@ -79,31 +81,31 @@ for agent in range(len(agents)):
             print("Episode: ", i, "Average Life time for last 100 Episodes: ", mean_reward)
             mean_reward = 0
         for j in range(steps):
-            # env.render()
-            action = agents[agent].action(state)
+            #env.render()
+            action = network.action(state)
             new_state, reward, done, _ = env.step(action)
             new_state = new_state.reshape(1, 4)
-            agents[agent].replay_memory(state, action, reward, new_state, done)
+            network.replay_memory(state, action, reward, new_state, done)
             state = new_state
 
             mean_reward += reward
             reward_per_play += reward
 
+
             if done:
         # print("Total steps for episode ", i, "is ", j)
                 break
-        agents[agent].train_network(batch_size)
+        network.train_network(batch_size)
+        await asyncio.sleep(0.0001)
 
-        if agent == 0:
-            plot_reward.append(float(reward_per_play))
-        else:
-            plot_reward[i] += reward_per_play
-print(plot_reward[199])
-plot_reward_two = []
-for rewards in range(episodes):
-    plot_reward_two.append(float(plot_reward[rewards] / amount_agents))
-plt.plot(plot_reward_two)
-print(plot_reward_two[199])
-plt.show()
+loop = asyncio.get_event_loop()
 
-# print("Current Epsilon", agent.epsilon)
+tasks = [
+    asyncio.ensure_future(learner_thread(network)),
+    asyncio.ensure_future(learner_thread(network)),
+    asyncio.ensure_future(learner_thread(network)),
+    asyncio.ensure_future(learner_thread(network)),
+]
+
+loop.run_until_complete(asyncio.wait(tasks))
+loop.close()

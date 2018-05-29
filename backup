@@ -7,3 +7,7 @@
         target_q[0][action] = target
         agent.fit(state, target_q, epochs=1, verbose=0)
 
+threads = [threading.Thread(target=learner_thread(network)) for i in range(2)]
+
+for t in threads:
+    t.start()
