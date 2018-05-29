@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab217c6-00c7-4f94-a2eb-d5db10f9cb71" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Async Deep Q.py" beforeDir="false" afterPath="$PROJECT_DIR$/Async Deep Q.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deepmind DQN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Deepmind DQN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup" beforeDir="false" afterPath="$PROJECT_DIR$/backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Async Deep Q.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +26,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Async Deep Q.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Async Deep Q Replay.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Async Deep Q.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="512">
+              <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -122,7 +133,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Async Deep Q">
+  <component name="RunManager" selected="Python.Async Deep Q (1)">
+    <configuration name="Async Deep Q (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="P6_Bachelor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Async Deep Q.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Async Deep Q" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="P6_Bachelor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,24 +165,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Async Deep Q Replay.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="DQN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="P6_Bachelor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,19 +225,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.DQN (1)" />
       <item itemvalue="Python.randondqn" />
       <item itemvalue="Python.Deepmind DQN" />
       <item itemvalue="Python.cartpole winner" />
       <item itemvalue="Python.Async Deep Q" />
+      <item itemvalue="Python.Async Deep Q (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Async Deep Q (1)" />
         <item itemvalue="Python.Async Deep Q" />
         <item itemvalue="Python.Deepmind DQN" />
         <item itemvalue="Python.cartpole winner" />
         <item itemvalue="Python.randondqn" />
-        <item itemvalue="Python.DQN (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +273,7 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.32841823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -375,8 +386,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="512">
+          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
