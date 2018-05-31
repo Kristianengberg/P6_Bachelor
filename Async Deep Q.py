@@ -97,20 +97,21 @@ async def learner_thread(network):
 
 
 def run_agents():
-    network = DQN(env.observation_space.shape[0], env.action_space.n, env)
-    loop = asyncio.get_event_loop()
-    tasks = [
-        asyncio.ensure_future(learner_thread(network)),
-        asyncio.ensure_future(learner_thread(network)),
-        asyncio.ensure_future(learner_thread(network)),
-        asyncio.ensure_future(learner_thread(network)),
-    ]
-    loop.run_until_complete(asyncio.wait(tasks))
-    loop.close()
+    for i in range(10):
+        print("Current iteration", i)
+        network = DQN(env.observation_space.shape[0], env.action_space.n, env)
+        loop = asyncio.get_event_loop()
+        tasks = [
+            asyncio.ensure_future(learner_thread(network)),
+            asyncio.ensure_future(learner_thread(network)),
+            asyncio.ensure_future(learner_thread(network)),
+            asyncio.ensure_future(learner_thread(network)),
+        ]
+        loop.run_until_complete(asyncio.wait(tasks))
 
 
-for _ in range(10):
-    run_agents()
+
+run_agents()
 
 for rewards in range(1000):
     plot_reward[rewards] = plot_reward[rewards] / (4*10)
