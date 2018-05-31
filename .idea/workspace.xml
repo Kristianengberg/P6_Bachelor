@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab217c6-00c7-4f94-a2eb-d5db10f9cb71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Async Deep Q.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Async Deep Q Replay.py" beforeDir="false" afterPath="$PROJECT_DIR$/Async Deep Q Replay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Async Deep Q.py" beforeDir="false" afterPath="$PROJECT_DIR$/Async Deep Q.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deepmind DQN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Deepmind DQN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup" beforeDir="false" afterPath="$PROJECT_DIR$/backup" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +20,8 @@
       <file leaf-file-name="Deepmind DQN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Deepmind DQN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="645">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -26,11 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Async Deep Q Replay.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Async Deep Q Replay.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            <state relative-caret-position="67">
+              <caret line="103" selection-start-line="103" selection-end-line="126" selection-end-column="10" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -38,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Async Deep Q.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Async Deep Q.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state relative-caret-position="68">
+              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -53,8 +65,8 @@
       <file leaf-file-name="backup" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backup">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="446">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -77,14 +89,15 @@
         <option value="$PROJECT_DIR$/DQN.py" />
         <option value="$PROJECT_DIR$/randondqn.py" />
         <option value="$PROJECT_DIR$/cartpole winner.py" />
-        <option value="$PROJECT_DIR$/Deepmind DQN.py" />
         <option value="$PROJECT_DIR$/backup" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Deepmind DQN.py" />
+        <option value="$PROJECT_DIR$/Async Deep Q Replay.py" />
         <option value="$PROJECT_DIR$/Async Deep Q.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="820" />
@@ -133,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Async Deep Q (1)">
+  <component name="RunManager" selected="Python.Async Deep Q">
     <configuration name="Async Deep Q (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="P6_Bachelor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,7 +219,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="randondqn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="P6_Bachelor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -218,26 +231,26 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/randondqn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.randondqn" />
       <item itemvalue="Python.Deepmind DQN" />
       <item itemvalue="Python.cartpole winner" />
       <item itemvalue="Python.Async Deep Q" />
       <item itemvalue="Python.Async Deep Q (1)" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Async Deep Q (1)" />
         <item itemvalue="Python.Async Deep Q" />
+        <item itemvalue="Python.Async Deep Q (1)" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.Deepmind DQN" />
         <item itemvalue="Python.cartpole winner" />
-        <item itemvalue="Python.randondqn" />
       </list>
     </recent_temporary>
   </component>
@@ -264,26 +277,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="820" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09583333" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50069445" side_tool="true" weight="0.32841823" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.32841823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -295,23 +308,79 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DQN.py">
+    <entry file="file://$PROJECT_DIR$/Deepmind DQN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="1200">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/randondqn.py">
+    <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="1185">
+          <caret line="87" selection-start-line="87" selection-end-line="88" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="17" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deepmind DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN.py" />
+    <entry file="file://$PROJECT_DIR$/randondqn.py" />
     <entry file="file://$PROJECT_DIR$/backup">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -340,54 +409,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN.py">
+    <entry file="file://$PROJECT_DIR$/DQN.py" />
+    <entry file="file://$PROJECT_DIR$/cartpole winner.py" />
+    <entry file="file://$PROJECT_DIR$/randondqn.py" />
+    <entry file="file://$PROJECT_DIR$/backup">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="446">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cartpole winner.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="e#48#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/randondqn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="971">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="48" />
+        <state relative-caret-position="120">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Deepmind DQN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        <state relative-caret-position="645">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -396,8 +438,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Async Deep Q Replay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        <state relative-caret-position="67">
+          <caret line="103" selection-start-line="103" selection-end-line="126" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Async Deep Q.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

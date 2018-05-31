@@ -59,11 +59,11 @@ class DQN:
 
 env = gym.make('CartPole-v0')
 agents = []
-amount_agents = 1
+amount_agents = 10
 for _ in range(amount_agents):
     agents.append(DQN(env.observation_space.shape[0], env.action_space.n, env))
 
-episodes = 2000
+episodes = 1000
 steps = 500
 batch_size = 64
 mean_reward = 0
@@ -98,12 +98,15 @@ for agent in range(len(agents)):
             plot_reward.append(float(reward_per_play))
         else:
             plot_reward[i] += reward_per_play
-print(plot_reward[199])
+
+
 plot_reward_two = []
 for rewards in range(episodes):
     plot_reward_two.append(float(plot_reward[rewards] / amount_agents))
+
 plt.plot(plot_reward_two)
-print(plot_reward_two[199])
+plt.ylabel('Score')
+plt.xlabel('Episodes')
 plt.show()
 
-# print("Current Epsilon", agent.epsilon)
+

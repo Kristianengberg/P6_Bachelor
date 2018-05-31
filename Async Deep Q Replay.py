@@ -6,7 +6,6 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 from collections import deque
-import threading
 import asyncio
 
 class DQN:
@@ -30,7 +29,6 @@ class DQN:
         model = Sequential()
         model.add(Dense(24, input_dim=self.input_size, activation='tanh'))
         model.add(Dense(24, activation='tanh'))
-        # model.add(Dense(24, activation='tanh'))
         model.add(Dense(self.output_size, activation='linear'))
         model.compile(loss='MSE', optimizer=Adam(lr=self.learning_rate, decay=self.learning_decay))
         return model
@@ -44,25 +42,19 @@ class DQN:
                 y_target[0][action] = reward if done else reward + self.gamma * np.max(self.model.predict(new_state)[0])
                 x_batch.append(state[0])
                 y_batch.append(y_target[0])
-
             self.model.fit(np.array(x_batch), np.array(y_batch), batch_size=len(x_batch), epochs=1, verbose=0)
-            if self.epsilon > self.epsilon_min:
-                self.epsilon *= self.epsilon_decay
+
 
     def action(self, state):
-        if np.random.random() <= self.epsilon:
-            action = env.action_space.sample()
-        else:
-            action_value = self.model.predict(state)
-            action = np.argmax(action_value)
+        action_value = self.model.predict(state)
+        action = np.argmax(action_value)
         return action
 
 
 env = gym.make('CartPole-v0')
-network = DQN(env.observation_space.shape[0], env.action_space.n, env)
 
 
-
+plot_reward = [0] * 1000
 
 async def learner_thread(network):
     episodes = 1000
@@ -70,7 +62,9 @@ async def learner_thread(network):
     batch_size = 64
     mean_reward = 0
     env = gym.make('CartPole-v0')
-
+    epsilon = 1
+    epsilon_decay = 0.995
+    epsilon_min = 0.01
     for i in range(episodes):
 
         state = env.reset()
@@ -80,9 +74,13 @@ async def learner_thread(network):
             mean_reward = mean_reward / 100
             print("Episode: ", i, "Average Life time for last 100 Episodes: ", mean_reward)
             mean_reward = 0
+            print("Current Epsilon", epsilon)
         for j in range(steps):
             #env.render()
-            action = network.action(state)
+            if np.random.random() <= epsilon:
+                action = env.action_space.sample()
+            else:
+                action = network.action(state)
             new_state, reward, done, _ = env.step(action)
             new_state = new_state.reshape(1, 4)
             network.replay_memory(state, action, reward, new_state, done)
@@ -95,17 +93,37 @@ async def learner_thread(network):
             if done:
         # print("Total steps for episode ", i, "is ", j)
                 break
+        plot_reward[i] += reward_per_play
+        if epsilon > epsilon_min:
+            epsilon *= epsilon_decay
+
         network.train_network(batch_size)
         await asyncio.sleep(0.0001)
 
-loop = asyncio.get_event_loop()
 
-tasks = [
-    asyncio.ensure_future(learner_thread(network)),
-    asyncio.ensure_future(learner_thread(network)),
-    asyncio.ensure_future(learner_thread(network)),
-    asyncio.ensure_future(learner_thread(network)),
-]
+def run_agents():
+    network = DQN(env.observation_space.shape[0], env.action_space.n, env)
+    loop = asyncio.get_event_loop()
+    tasks = [
+        asyncio.ensure_future(learner_thread(network)),
+        asyncio.ensure_future(learner_thread(network)),
+        asyncio.ensure_future(learner_thread(network)),
+        asyncio.ensure_future(learner_thread(network)),
+    ]
+    loop.run_until_complete(asyncio.wait(tasks))
+    loop.close()
 
-loop.run_until_complete(asyncio.wait(tasks))
-loop.close()
+
+for _ in range(10):
+    run_agents()
+
+for rewards in range(1000):
+    plot_reward[rewards] = plot_reward[rewards] / (4*10)
+
+
+plt.plot(plot_reward)
+plt.ylabel('Score')
+plt.xlabel('Episodes')
+plt.show()
+
+

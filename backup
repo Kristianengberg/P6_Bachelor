@@ -11,3 +11,31 @@ threads = [threading.Thread(target=learner_thread(network)) for i in range(2)]
 
 for t in threads:
     t.start()
+
+
+        epsilon = 1
+    epsilon_decay = 0.995
+    epsilon_min = random.choice(4 * [0.1] + 3 * [0.01] + 3 * [0.5])
+
+    reward_done = []
+
+for i in range(episodes):
+    obs = env.reset()
+    current_reward = 0
+    for j in range(500):
+        obs = obs.reshape(1, 4)
+        #env.render()
+        action_value = agents[0].model.predict(obs)
+        action = np.argmax(action_value)
+        new_state, reward, done, _ = env.step(action)
+        obs = new_state
+
+        current_reward += reward
+        if done:
+            break
+    reward_done.append(current_reward)
+
+plt.plot(reward_done)
+plt.ylabel('Score')
+plt.xlabel('Episodes')
+plt.show()
