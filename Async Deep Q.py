@@ -89,8 +89,7 @@ async def learner_thread(network):
         if epsilon > epsilon_min:
             epsilon *= epsilon_decay
 
-        if episodes % 20 == 0:
-            network.train_network(memory)
+        network.train_network(memory)
         plot_reward[i] += reward_per_play
         await asyncio.sleep(0.0001)
 
